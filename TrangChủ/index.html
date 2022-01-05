@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NKE</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../TrangChủ/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <!-- script -->
+  <script>
+       function ktTenDN(){
+            var Ten= document.getElementById("tenDN").value;
+            var t= document.getElementById("tenDN");
+            var s=document.getElementById("p1");
+            re = /^[A-Za-z0-9_\.]{6,32}$/gm;
+            if(re.test(Ten)==false||Ten==""){
+                t.style.borderColor="red";
+                s.innerHTML="Tên Đăng Nhập Trên 6 Ký Tự";
+                
+            }
+            else{
+                t.style.borderColor="black";
+                s.innerHTML="";
+            }
+        }   
+        function ktMK(){
+            var b= document.getElementById("mk").value;
+            var t= document.getElementById("mk");
+            var s=document.getElementById("p2");
+            re = /^[\w-@#$%^&*!]{8,}$/gm;
+            if(re.test(b)==false||b==""){
+                t.style.borderColor="red";
+                s.innerHTML="Mật Khẩu Trên 8 Ký Tự";
+                
+            }
+            else{
+                t.style.borderColor="black";
+                s.innerHTML="";
+            }
+        }   
+         function resKtMK(){
+            var a= document.getElementById("mk").value;
+            var mk= document.getElementById("rmk").value;
+            var t= document.getElementById("rmk");
+            var s=document.getElementById("p3");
+            re = /^[\w-@#$%^&*!]{8,}$/gm;
+            if(mk!=a || mk==""){
+                t.style.borderColor="red";
+                s.innerHTML="Mật Khẩu Không Trùng Khớp";
+                
+            }
+            else{
+                t.style.borderColor="black";
+                s.innerHTML="";
+            }
+        }   
+  </script>
+  <!-- papper -->
+    <div class="container-fluid" style="background-color:rgb(245, 245, 237)">
+        <div class="row border-bottom" >
+            <div class="col-12" style="height: 50px;">
+                   
+                    <img  src="../img/logojordan.png" alt="" style="height: 25px; padding-left: 20px;margin-top: 10px;">
+                   
+                    <div  class="align-items-center" style="float: right; line-height: 50px;">
+                    <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#myModal" style="margin-right: 10px; border-radius: 30px; ">
+                      Đăng Ký
+                    </button>
+                    <button type="button" class="btn btn-light" data-toggle="modal" data-target="#myModalDN" style="border-radius: 20px;">Đăng Nhập</button>
+                    </div>
+        </div>
+        </div>
+        <div class="row border-bottom " >
+            <div class="col-4" style="background-color: white;">
+                <a href=""> <img src="../img/nike-logo.jpg" alt="" style="height: 50px; padding-left: 10px;"></a>   
+            </div>
+            <div class="col-4" style="background-color:white;">
+                <ul class="nav">
+                    <li class="nav-item">
+                      <a class="nav-link" href="../Nam/index.html">Nam</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="../Nu/index.html">Nữ</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="../TreEm/index.html">Trẻ Em</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../sale/index.html">Giảm Giá</a>
+                      </li>
+                    
+                  </ul>
+            
+            </div>
+            <div class="col-4" style="background-color:white; " >
+                <div class="input-group" >
+                    <input type="text" class="form-control" placeholder="Search "style="border-radius: 50px;">
+                    <div class="input-group-append">
+                      <button class="btn btn-secondary" type="button"style="border-radius: 50px;">
+                        <i class="fa fa-search"> 
+                            Tìm
+                        </i>
+                      </button>
+                    </div>
+                  </div>
+            </div>    
+        </div>
+        <!-- main -->
+        <div class="row border-bottom">
+            <div class="col-12" >
+               <h3>Just Do It
+                <span>
+                <a href="../GioHang/index.html">
+                   <img src="../img/Shopping-Cart-10.png" alt="" 
+                      style="height: 35px; float: right; margin-right: 10px; margin-top: 5px;">
+                </a>
+              </span>
+               </h3>
+              
+               
+              
+            </div>
+
+        </div>
+        <div class="row" style="background-color: white;">
+          <div class="col-12" >
+            <img src="../img/nike-image.jpg" alt="" style="margin-left: 60px;">
+          </div>
+      </div>
+      <div class="row border-bottom border-dark " >
+        <div class="col-12" >
+          <p class="lead text-dark">
+           Trending
+          </p>
+        </div>
+        </div>
+        <div class="row" style="background-color: white;">
+          <div class="col-6" >
+            <div class="hover hover-1 text-white rounded">
+              <img src="../img/g-dragon-nike.jpg" alt="" style="height: 500px;">
+              <div class="hover-overlay"></div>
+              <div class="hover-1-noidung px-5 py-4">
+                <h3 class="hover-1-tieude text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">PEACEMINUSONE x AF1 </span>Para-Noise 2.0</h3>
+                <p class="hover-1-trichdan font-weight-dark mb-0">STYLE DD3223-100 | COLORWAY WHITE/BLACK</p>
+              </div>
+            </div>
+           
+            
+          </div>
+          <div class="col-6" >
+            <div class="hover hover-1 text-white rounded">
+             <img src="../img/review-giay-nike-nam1.jpg" alt="" style=" height: 500px; width: 600px; margin-left: 30px;">
+             <div class="hover-overlay"></div>
+             <div class="hover-1-noidung px-5 py-4">
+              <h3 class="hover-1-tieude text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Nike Air Max </span>2017</h3>
+              <p class="hover-1-trichdan font-weight-dark mb-0">STYLE 849559-005 | COLORWAY LIGHT BONE / SUMMIT WHITE</p>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="row border-top" style="background-color: white; padding-top: 20px; padding-bottom: 20px;">
+          <div class="row-12">
+            <h class="text-uppercase font-weight-bold " style="font-size: 20px; margin-left: 600px;">
+              come back and support us
+            </h>
+          </div>
+
+        </div>
+      
+         <!--footer  -->
+
+     
+      <div class="row border-top" id="rowfooter" style="background-color: black;">
+        <div class="col-6">
+          <ul class="nav flex-column" id="footer">
+            <li class="nav-item">
+              <p class="font-weight-normal">Địa Chỉ:</p>
+            </li>
+            <li class="nav-item">
+              <p class="font-weight-normal">Số Điện Thoại:</p>
+            </li>
+            <li class="nav-item">
+              <p class="font-weight-normal">Email:</p>
+            </li>
+            <li class="nav-item">
+              <p class="font-weight-normal">WebSite:</p>
+              </li>
+            
+          </ul>
+        </div>
+        <div class="row-6">
+          <ul class="nav flex-column" id="list-footer">
+            <li class="nav-item" style="margin-left: -2px;">
+              <a href=""class="nav-link" >
+              <img src="../img/fb.png" alt="" style="height: 30px;">
+              <span>FaceBook</span>
+            </a>
+            </li>
+            <li class="nav-item">
+              <a href=""class="nav-link" >
+              <img src="../img/google-chrome-icon-18-256.png" alt="" style="height: 25px;">
+              <span>Google</span>
+            </a>
+            </li>
+            <li class="nav-item">
+              <a href=""class="nav-link" >
+              <img src="../img/icon-youtube.png" alt="" style="height: 24px;">
+              <span>Youtube</span>
+            </a>  
+            </li>
+          </ul>
+        </div>
+
+      </div>   
+      <div class="row border-top border-secondary" style="background-color: black;">
+        <div class="col-12 ">
+           <p class=" text-muted">© 2021 Nike, Inc. All Rights Reserved</p>
+        </div>
+      </div>
+    
+      <!-- model -->
+      <div class="modal fade" id="myModal">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+          
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title" style="margin-left: 180px; color: rgb(89, 151, 131);" >Đăng Ký</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            
+            <!-- Modal body -->
+            <div class="modal-body">
+             <div class="row">
+              <div class="col-12">
+                <input type="text" onblur="ktTenDN()" class="form-control" id="tenDN" placeholder="Tên Đăng Nhập"style="border-radius: 10px;">
+                <p class="text-danger" id="p1"></p>
+              </div>
+             </div>
+             <div class="row">
+              <div class="col-12">
+                <input type="password" onblur="ktMK()" class="form-control" id="mk" placeholder="Mật Khẩu"style="border-radius: 10px;">
+                <p class="text-danger" id="p2"></p>
+              </div>
+             </div>
+             <div class="row">
+              <div class="col-12">
+                <input type="password" onblur="resKtMK()" class="form-control" id="rmk" placeholder="Nhập Lại Mật Khẩu"style="border-radius: 10px;">
+                <p class="text-danger" id="p3"></p>
+              </div>
+             </div>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Đăng Ký</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
+            </div>           
+          </div>
+        </div>
+      </div>
+      <!-- model DN -->
+      <div class="modal fade" id="myModalDN">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+          
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title" style="margin-left: 180px; color: rgb(52, 70, 64);" >Đăng Nhập</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            
+            <!-- Modal body -->
+            <div class="modal-body">
+             <div class="row">
+              <div class="col-12">
+                <input type="text" onblur="ktTenDN()" class="form-control" id="tenDN" placeholder="Tên Đăng Nhập"style="border-radius: 10px;">
+                <!-- <p id="p1"></p> -->
+              </div>
+             </div>
+             <div class="row">
+              <div class="col-12">
+                <input type="password" onblur="ktMK()" class="form-control" id="mk" placeholder="Mật Khẩu"style="border-radius: 10px;">
+                <!-- <p id="p2"></p> -->
+              </div>
+             </div>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Đăng Nhập</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Thoát</button>
+            </div>           
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+</html>

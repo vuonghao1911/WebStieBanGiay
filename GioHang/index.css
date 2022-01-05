@@ -1,0 +1,83 @@
+.form-control:hover{
+    background-color: rgb(215, 218, 219);
+    }
+    .has-search .form-control {
+        padding-left: 2.375rem;
+    }
+    
+    .has-search .form-control-feedback {
+        position: absolute;
+        z-index: 2;
+        display: block;
+        width: 2.375rem;
+        height: 2.375rem;
+        line-height: 2.375rem;
+        text-align: center;
+        pointer-events: none;
+        color: #aaa;
+    }
+    .input-group{
+        margin-top: 5px;
+    }
+    .nav-link{
+        color: black;
+    }
+    .col-12 h3{
+        
+        text-align: center;
+    }
+    .text-dark{
+        font-size: 30px;
+        margin: 0px;
+    }
+    .nav-item p{
+        color: white;
+        font-family:Nike TG,Helvetica Neue,Helvetica,Arial,sans-serif;;
+         font-weight: bold; 
+         font-size: 10px;
+    }
+    .nav-item span{
+    color: white;
+    margin-right: 20px;
+    font-size: 10px;
+    }
+    #list-footer{
+        margin-left: 400px;
+        /* margin-top: 5px; */
+    }
+    /* #list-footer li{
+        margin-top: 2px;
+    } */
+    #footer{
+        margin-top: 20px;
+    }
+    
+    /* .row{
+        width: 1445px; */
+    /* } */
+    .text-muted{
+        font-size: 10px;
+        margin-top: 10px;
+    }
+    .modal-body .row{
+        margin-bottom: 10px;
+        /* width: 498px; */
+    }
+    
+    .modal-body p{
+     font-size: 12px;
+    }
+    .col-lg-6 u{
+        line-height: 40px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .col-lg-6 p{
+        margin-top: 10px
+    }
+    
+    .col-lg-12 p{
+        color: red;
+        font-style: italic;
+        margin-top: 5px;
+    }

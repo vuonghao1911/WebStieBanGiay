@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAM</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../Nam/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <!-- script -->
+  <script type="text/javascript">
+       function ktTenDN(){
+            var Ten= document.getElementById("tenDN").value;
+            var t= document.getElementById("tenDN");
+            var s=document.getElementById("p1");
+            re = /^[A-Za-z0-9_\.]{6,32}$/gm;
+            if(re.test(Ten)==false||Ten==""){
+                t.style.borderColor="red";
+                s.innerHTML="Tên Đăng Nhập Trên 6 Ký Tự";
+                
+            }
+            else{
+                t.style.borderColor="black";
+                s.innerHTML="";
+            }
+        }   
+        function ktMK(){
+            var b= document.getElementById("mk").value;
+            var t= document.getElementById("mk");
+            var s=document.getElementById("p2");
+            re = /^[\w-@#$%^&*!]{8,}$/gm;
+            if(re.test(b)==false||b==""){
+                t.style.borderColor="red";
+                s.innerHTML="Mật Khẩu Trên 8 Ký Tự";
+                
+            }
+            else{
+                t.style.borderColor="black";
+                s.innerHTML="";
+            }
+        }   
+         function resKtMK(){
+            var a= document.getElementById("mk").value;
+            var mk= document.getElementById("rmk").value;
+            var t= document.getElementById("rmk");
+            var s=document.getElementById("p3");
+            re = /^[\w-@#$%^&*!]{8,}$/gm;
+            if(mk!=a || mk==""){
+                t.style.borderColor="red";
+                s.innerHTML="Mật Khẩu Không Trùng Khớp";
+                
+            }
+            else{
+                t.style.borderColor="black";
+                s.innerHTML="";
+            }
+          }  
+        	$('#carousel-example').on('slide.bs.carousel', function (e) {
+
+/*
+    CC 2.0 License Iatek LLC 2018
+    Attribution required
+*/
+var $e = $(e.relatedTarget);
+var idx = $e.index();
+var itemsPerSlide = 5;
+var totalItems = $('.carousel-item').length;
+
+if (idx >= totalItems-(itemsPerSlide-1)) {
+    var it = itemsPerSlide - (totalItems - idx);
+    for (var i=0; i<it; i++) {
+        // append slides to end
+        if (e.direction=="left") {
+            $('.carousel-item').eq(i).appendTo('.carousel-inner');
+        }
+        else {
+            $('.carousel-item').eq(0).appendTo('.carousel-inner');
+        }
+    }
+}
+});
+
+  </script>
+  <!-- papper -->
+    <div class="container-fluid" style="background-color:white">
+        <div class="row border-bottom" style="background-color:rgb(245, 245, 237)" >
+            <div class="col-12" style="height: 50px;">
+                   
+                    <img  src="../img/logojordan.png" alt="" style="height: 25px; padding-left: 20px;margin-top: 10px;">
+                   
+                    <div  class="align-items-center" style="float: right; line-height: 50px;">
+                    <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#myModal" style="margin-right: 10px; border-radius: 30px; ">
+                      Đăng Ký
+                    </button>
+                    <button type="button" class="btn btn-light" data-toggle="modal" data-target="#myModalDN" style="border-radius: 20px;">Đăng Nhập</button>
+                    </div>
+        </div>
+        </div>
+        <div class="row border-bottom " >
+            <div class="col-4" style="background-color: white;">
+                <a href="../TrangChủ/index.html"> <img src="../img/nike-logo.jpg" alt="" style="height: 50px; padding-left: 10px;"></a>   
+            </div>
+            <div class="col-4" style="background-color:white;">
+                <ul class="nav">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Nam</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="../Nu/index.html">Nữ</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="../TreEm/index.html">Trẻ Em</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../sale/index.html">Giảm Giá</a>
+                      </li>
+                    
+                  </ul>
+            
+            </div>
+            <div class="col-4" style="background-color:white; " >
+                <div class="input-group" >
+                    <input type="text" class="form-control" placeholder="Search "style="border-radius: 50px;">
+                    <div class="input-group-append">
+                      <button class="btn btn-secondary" type="button"style="border-radius: 50px;">
+                        <i class="fa fa-search"> 
+                            Tìm
+                        </i>
+                      </button>
+                    </div>
+                  </div>
+            </div>    
+        </div>
+        <!-- main -->
+        <div class="row border-bottom"  style="background-color:rgb(245, 245, 237)">
+            <div class="col-12" >
+               <h3>Just Do It
+                <span>
+                <a href="../GioHang/index.html">
+                   <img src="../img/Shopping-Cart-10.png" alt="" 
+                      style="height: 35px; float: right; margin-right: 10px; margin-top: 5px;">
+                </a>
+              </span>
+               </h3>
+            </div>
+         </div>
+         <div class="row">
+            <div class=" col-12-xl">
+              <p class="text-muted">
+                Nam | Lifestyle
+              </p>
+            </div>
+         </div>
+         <!-- list img -->
+         <div id="carousel-example" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner row w-100 mx-auto" role="listbox">
+              <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 active">
+                  <div class="hover hover-1 text-white rounded">
+                  <img src="../img/custom-nike-waffle-one-by-you.jpg "  class="img-fluid mx-auto d-block" alt="img1">
+                  <div class="hover-overlay"></div> 
+                  <div class="hover-1-noidung px-5 py-4">
+                  <h3 class="hover-1-tieude text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">PEACEMINUSONE x </span>AF1</h3>
+                  <p class="hover-1-trichdan font-weight-dark mb-0">STYLE:DJ0966-991|COLORWAY: Multi-Colour</p>
+                  <p class="hover-1-trichdan font-weight-dark mb-0 " >3,829,000 đ  3,519,000₫</p>
+                  </div>
+                  </div>
+              </div>
+              <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="hover hover-1 text-white rounded">
+                  <img src="../img/air-max-95-se-shoe-DXpbtT.jpg" class="img-fluid mx-auto d-block" alt="img2">
+                  <div class="hover-overlay"></div> 
+                  <div class="hover-1-noidung px-5 py-4">
+                  <h3 class="hover-1-tieude text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Nike Air Max  </span>95 se</h3>
+                  <p class="hover-1-trichdan font-weight-dark mb-0">STYLE:DJ4670-084|COLORWAY: Smoke Grey/Light Smoke Grey</p>
+                  <p class="hover-1-trichdan font-weight-dark mb-0">4,999,000 đ</p>
+                  </div>
+                  </div>
+              </div>
+              <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="hover hover-1 text-white rounded">
+                  <img src="../img/ari in.jpg" class="img-fluid mx-auto d-block" alt="img3">
+                  <div class="hover-overlay"></div> 
+                  <div class="hover-1-noidung px-5 py-4">
+                  <h3 class="hover-1-tieude text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Nike Air </span>Huarache </h3>
+                  <p class="hover-1-trichdan font-weight-dark mb-0">STYLE:DD1068-101|COLORWAY: White/Bright </p>
+                  <p class="hover-1-trichdan font-weight-dark mb-0">3,829,000₫</p>
+                  </div>
+                  </div>
+              </div>
+              <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="hover hover-1 text-white rounded">
+                  <img src="../img/jordan-delta-2-shoe-8Z0Rkk.jpg" class="img-fluid mx-auto d-block" alt="img4">
+                  <div class="hover-overlay"></div> 
+                  <div class="hover-1-noidung px-5 py-4">
+                  <h3 class="hover-1-tieude text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Jordan </span>Delta 2</h3>
+                  <p class="hover-1-trichdan font-weight-dark mb-0">STYLE:CV8121-002|COLORWAY: Platinum Tint/White </p>
+                  <p class="hover-1-trichdan font-weight-dark mb-0">3,829,000₫</p>
+                  </div>
+                  </div>
+              </div>
+              <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="hover hover-1 text-white rounded">
+                  <img src="../img/air-max-96-ii-shoe-m3NXTH.jpg" class="img-fluid mx-auto d-block" alt="img5">
+                  <div class="hover-overlay"></div> 
+                  <div class="hover-1-noidung px-5 py-4">
+                  <h3 class="hover-1-tieude text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Nike Air Max  </span>96 II</h3>
+                  <p class="hover-1-trichdan font-weight-dark mb-0">STYLE:CZ1921-100|COLORWAY:  White/Midnight Navy</p>
+                  <p class="hover-1-trichdan font-weight-dark mb-0">4,699,000₫</p>
+                  </div>
+                  </div>
+              </div>
+              <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="hover hover-1 text-white rounded">
+                  <img src="../img/react-vision-shoe-lhpBwx.jpg" class="img-fluid mx-auto d-block" alt="img6">
+                  <div class="hover-overlay"></div> 
+                  <div class="hover-1-noidung px-5 py-4">
+                  <h3 class="hover-1-tieude text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Nike React </span>Vision</h3>
+                  <p class="hover-1-trichdan font-weight-dark mb-0">STYLE: CD4373-401|COLORWAY: Light Armoury Blue/Amber Brown </p>
+                  <p class="hover-1-trichdan font-weight-dark mb-0">3,829,000₫</p>
+                  </div>
+                  </div>
+              </div>
+              <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="hover hover-1 text-white rounded">
+                  <img src="../img/air-vapormax-evo-shoe-mc10HF.jpg" class="img-fluid mx-auto d-block" alt="img7">
+                  <div class="hover-overlay"></div> 
+                  <div class="hover-1-noidung px-5 py-4">
+                  <h3 class="hover-1-tieude text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Nike Air VaporMax </span>Evo</h3>
+                  <p class="hover-1-trichdan font-weight-dark mb-0">STYLE:CT2868-001|COLORWAY: Anthracite/White </p>
+                  <p class="hover-1-trichdan font-weight-dark mb-0">6,179,000₫</p>
+                  </div>
+                  </div>
+              </div>
+              <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="hover hover-1 text-white rounded">
+                  <img src="../img/air-max-270-react-se-shoe-dr3Pn3.jpg" class="img-fluid mx-auto d-block" alt="img8">
+                  <div class="hover-overlay"></div> 
+                  <div class="hover-1-noidung px-5 py-4">
+                  <h3 class="hover-1-tieude text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Nike Air Max </span>270</h3>
+                  <p class="hover-1-trichdan font-weight-dark mb-0">STYLE: CK6457-100|COLORWAY: White/Blue Fury </p>
+                  <p class="hover-1-trichdan font-weight-dark mb-0">4,699,000₫</p>
+                  </div>
+                  </div>
+              </div>
+              <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="hover hover-1 text-white rounded">
+                  <img src="../img/air-max-2x-shoe-Wh9d6P.jpg" class="img-fluid mx-auto d-block" alt="img8">
+                  <div class="hover-overlay"></div> 
+                  <div class="hover-1-noidung px-5 py-4">
+                  <h3 class="hover-1-tieude text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Nike Air </span>max 2x</h3>
+                  <p class="hover-1-trichdan font-weight-dark mb-0">STYLE: CK2943-103|COLORWAY: White/Electric Green </p>
+                  <p class="hover-1-trichdan font-weight-dark mb-0">2,649,000₫</p>
+                  </div>
+                  </div>
+              </div>
+              <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="hover hover-1 text-white rounded">
+                  <img src="../img/dbreak-type-shoe-XbSXwH.jpg" class="img-fluid mx-auto d-block" alt="img8">
+                  <div class="hover-overlay"></div> 
+                  <div class="hover-1-noidung px-5 py-4">
+                  <h3 class="hover-1-tieude text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Nike DBreak </span>Type</h3>
+                  <p class="hover-1-trichdan font-weight-dark mb-0">STYLE:DD5109-068|COLORWAY:  Iron Grey/Off-Noir </p>
+                  <p class="hover-1-trichdan font-weight-dark mb-0">1,848,000₫</p>
+                  </div>
+                  </div>
+              </div>
+          </div>
+          <a class="carousel-control-prev" href="#carousel-example" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carousel-example" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+          </a>
+        </div>
+        <!-- Running -->
+        <div class="row border-top border-bottom" >
+          <div class=" col-12-xl">
+            <p class="text-muted">
+             Nam | Running
+            </p>
+          </div>
+       </div>
+
+       <div id="running" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner row w-100 mx-auto" role="listbox">
+            <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 active">
+                <div class="hover hover-1 text-white rounded">
+                <img src="../img/air-zoom-pegasus-38-running-shoe-Hmsj6Q.jpg "  class="img-fluid mx-auto d-block" alt="img1">
+                <div class="hover-overlay"></div> 
+                <div class="hover-1-noidung px-5 py-4">
+                <h3 class="hover-1-tieude text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Nike Air Zoom </span>Pegasus 38</h3>
+                <p class="hover-1-trichdan font-weight-dark mb-0">STYLE:CW7356-101| COLORWAY: White/Pure Platinum</p>
+                <p class="hover-1-trichdan font-weight-dark mb-0">3,519,000₫</p>
+                </div>
+                </div>
+            </div>
+            <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+              <div class="hover hover-1 text-white rounded">
+                <img src="../img/running2.jpg" class="img-fluid mx-auto d-block" alt="img2">
+                <div class="hover-overlay"></div> 
+                <div class="hover-1-noidung px-5 py-4">
+                <h3 class="hover-1-tieude text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Nike ZoomX </span>Vaporfly</h3>
+                <p class="hover-1-trichdan font-weight-dark mb-0">STYLE:CU4111-400|COLORWAY: Glacier Blue</p>
+                <p class="hover-1-trichdan font-weight-dark mb-0">6,609,000₫</p>
+                </div>
+                </div>
+            </div>
+            <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+              <div class="hover hover-1 text-white rounded">
+                <img src="../img/running3.jpg" class="img-fluid mx-auto d-block" alt="img3">
+                <div class="hover-overlay"></div> 
+                <div class="hover-1-noidung px-5 py-4">
+                <h3 class="hover-1-tieude text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Nike Air Zoom </span>Tempo </h3>
+                <p class="hover-1-trichdan font-weight-dark mb-0">STYLE: CI9923-300| COLORWAY: Chlorine Blue/White </p>
+                <p class="hover-1-trichdan font-weight-dark mb-0">5,869,000₫</p>
+                </div>
+                </div>
+            </div>
+            <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+              <div class="hover hover-1 text-white rounded">
+                <img src="../img/running4.jpg" class="img-fluid mx-auto d-block" alt="img4">
+                <div class="hover-overlay"></div> 
+                <div class="hover-1-noidung px-5 py-4">
+                <h3 class="hover-1-tieude text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Nike Air Zoom </span>Alphafly</h3>
+                <p class="hover-1-trichdan font-weight-dark mb-0">STYLE: CI9925-300| COLORWAY: Black/Oracle Aqua/White </p>
+                <p class="hover-1-trichdan font-weight-dark mb-0">8,059,000₫</p>
+                </div>
+                </div>
+            </div>
+            <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+              <div class="hover hover-1 text-white rounded">
+                <img src="../img/running5.jpg" class="img-fluid mx-auto d-block" alt="img5">
+                <div class="hover-overlay"></div> 
+                <div class="hover-1-noidung px-5 py-4">
+                <h3 class="hover-1-tieude text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Nike Air Zoom </span>Pegasus 38</h3>
+                <p class="hover-1-trichdan font-weight-dark mb-0">STYLE: DJ3128-001| COLORWAY:  White/Flash Crimson/Volt</p>
+                <p class="hover-1-trichdan font-weight-dark mb-0">3,519,000₫</p>
+                </div>
+                </div>
+            </div>
+            <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+              <div class="hover hover-1 text-white rounded">
+                <img src="../img/running6.jpg" class="img-fluid mx-auto d-block" alt="img6">
+                <div class="hover-overlay"></div> 
+                <div class="hover-1-noidung px-5 py-4">
+                <h3 class="hover-1-tieude text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Nike Air Zoom </span>Tempo</h3>
+                <p class="hover-1-trichdan font-weight-dark mb-0">STYLE: V1889-401| COLORWAY: College Navy/Pure Platinum</p>
+                <p class="hover-1-trichdan font-weight-dark mb-0">6,529,000₫</p>
+                </div>
+                </div>
+            </div>
+            <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+              <div class="hover hover-1 text-white rounded">
+                <img src="../img/running7.jpg" class="img-fluid mx-auto d-block" alt="img7">
+                <div class="hover-overlay"></div> 
+                <div class="hover-1-noidung px-5 py-4">
+                <h3 class="hover-1-tieude text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Nike Pegasus </span>Trail 3</h3>
+                <p class="hover-1-trichdan font-weight-dark mb-0">STYLE:DA8697-300|COLORWAY: Mystic Teal/University Gold </p>
+                <p class="hover-1-trichdan font-weight-dark mb-0">3,829,000₫</p>
+                </div>
+                </div>
+            </div>
+            <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+              <div class="hover hover-1 text-white rounded">
+                <img src="../img/running8.jpg" class="img-fluid mx-auto d-block" alt="img8">
+                <div class="hover-overlay"></div> 
+                <div class="hover-1-noidung px-5 py-4">
+                <h3 class="hover-1-tieude text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Nike Downshif </span>10</h3>
+                <p class="hover-1-trichdan font-weight-dark mb-0">STYLE:CI9981-012|COLORWAY: Photon Dust/Bright Crimson</p>
+                <p class="hover-1-trichdan font-weight-dark mb-0">1,338,000₫</p>
+                </div>
+                </div>
+            </div>
+            <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+              <div class="hover hover-1 text-white rounded">
+                <img src="../img/running10.jpg" class="img-fluid mx-auto d-block" alt="img10">
+                <div class="hover-overlay"></div> 
+                <div class="hover-1-noidung px-5 py-4">
+                <h3 class="hover-1-tieude text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Nike Revolution</span> 5 EXT</h3>
+                <p class="hover-1-trichdan font-weight-dark mb-0">STYLE:CZ8591-012|COLORWAY: Photon Dust/Bright Crimson </p>
+                <p class="hover-1-trichdan font-weight-dark mb-0">2,649,000₫</p>
+                </div>
+                </div>
+            </div>
+            <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+              <div class="hover hover-1 text-white rounded">
+                <img src="../img/running9.jpg" class="img-fluid mx-auto d-block" alt="img9">
+                <div class="hover-overlay"></div> 
+                <div class="hover-1-noidung px-5 py-4">
+                <h3 class="hover-1-tieude text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Nike Air Zoom </span>Alphafly</h3>
+                <p class="hover-1-trichdan font-weight-dark mb-0">STYLE:DD8877-101|COLORWAY:Chile Red/Black </p>
+                <p class="hover-1-trichdan font-weight-dark mb-0">8,369,000₫</p>
+                </div>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#running" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#running" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+      </div>
+    
+      <!-- jordan -->
+      <div class="row border-top border-bottom" >
+        <div class=" col-12-xl">
+          <p class="text-muted">
+          Nam | Jordan
+          </p>
+        </div>
+     </div>
+
+     <div id="jordan" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner row w-100 mx-auto" role="listbox">
+          <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 active">
+              <div class="hover hover-1 text-white rounded">
+              <img src="../img/jordan1.jpg "  class="img-fluid mx-auto d-block" alt="img1">
+              <div class="hover-overlay"></div> 
+              <div class="hover-1-noidung px-5 py-4">
+              <h3 class="hover-1-tieude text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Air Jordan </span>XXXV</h3>
+              <p class="hover-1-trichdan font-weight-dark mb-0">STYLE:CW2459-101|COLORWAY: White/Black/University Red</p>
+              <p class="hover-1-trichdan font-weight-dark mb-0">4,849,000₫</p>
+              </div>
+              </div>
+          </div>
+          <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="hover hover-1 text-white rounded">
+              <img src="../img/jordan2.jpg" class="img-fluid mx-auto d-block" alt="img2">
+              <div class="hover-overlay"></div> 
+              <div class="hover-1-noidung px-5 py-4">
+              <h3 class="hover-1-tieude text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Zion 1 </span>PF</h3>
+              <p class="hover-1-trichdan font-weight-dark mb-0">STYLE:DA3129-100|COLORWAY: White</p>
+              <p class="hover-1-trichdan font-weight-dark mb-0">3,519,000₫</p>
+              </div>
+              </div>
+          </div>
+          <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="hover hover-1 text-white rounded">
+              <img src="../img/jordan3.jpg" class="img-fluid mx-auto d-block" alt="img3">
+              <div class="hover-overlay"></div> 
+              <div class="hover-1-noidung px-5 py-4">
+              <h3 class="hover-1-tieude text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Jordan</span> Delta 2</h3>
+              <p class="hover-1-trichdan font-weight-dark mb-0">STYLE:CV8121-002|COLORWAY: White/Particle Grey </p>
+              <p class="hover-1-trichdan font-weight-dark mb-0">3,829,000₫</p>
+              </div>
+              </div>
+          </div>
+          <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="hover hover-1 text-white rounded">
+              <img src="../img/jordan4.jpg" class="img-fluid mx-auto d-block" alt="img4">
+              <div class="hover-overlay"></div> 
+              <div class="hover-1-noidung px-5 py-4">
+              <h3 class="hover-1-tieude text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Air Jordan </span>13</h3>
+              <p class="hover-1-trichdan font-weight-dark mb-0">STYLE:DJ5982-600| COLORWAY: Gym Red/Flint Grey</p>
+              <p class="hover-1-trichdan font-weight-dark mb-0">5,589,000₫</p>
+              </div>
+              </div>
+          </div>
+          <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="hover hover-1 text-white rounded">
+              <img src="../img/jordan5.jpg" class="img-fluid mx-auto d-block" alt="img5">
+              <div class="hover-overlay"></div> 
+              <div class="hover-1-noidung px-5 py-4">
+              <h3 class="hover-1-tieude text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Jordan </span>ADG 2</h3>
+              <p class="hover-1-trichdan font-weight-dark mb-0">STYLE:CT7812-001| COLORWAY: Black/Summit White</p>
+              <p class="hover-1-trichdan font-weight-dark mb-0">2,878,000₫</p>
+              </div>
+              </div>
+          </div>
+          <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="hover hover-1 text-white rounded">
+              <img src="../img/jordan6.jpg" class="img-fluid mx-auto d-block" alt="img6">
+              <div class="hover-overlay"></div> 
+              <div class="hover-1-noidung px-5 py-4">
+              <h3 class="hover-1-tieude text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Jordan </span>Max 200</h3>
+              <p class="hover-1-trichdan font-weight-dark mb-0">STYLE:CD6105-601| COLORWAY: Fire Red/Sail/Black</p>
+              <p class="hover-1-trichdan font-weight-dark mb-0">2,938,000₫</p>
+              </div>
+              </div>
+          </div>
+          <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="hover hover-1 text-white rounded">
+              <img src="../img/jordan7.jpg" class="img-fluid mx-auto d-block" alt="img7">
+              <div class="hover-overlay"></div> 
+              <div class="hover-1-noidung px-5 py-4">
+              <h3 class="hover-1-tieude text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Jordan </span>'Why Not?'</h3>
+              <p class="hover-1-trichdan font-weight-dark mb-0">STYLE:CK6612-101| COLORWAY: Sail/Spruce Aura</p>
+              <p class="hover-1-trichdan font-weight-dark mb-0">2,298,000₫</p>
+              </div>
+              </div>
+          </div>
+          <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="hover hover-1 text-white rounded">
+              <img src="../img/jordan8.jpg" class="img-fluid mx-auto d-block" alt="img8">
+              <div class="hover-overlay"></div> 
+              <div class="hover-1-noidung px-5 py-4">
+              <h3 class="hover-1-tieude text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Air Jordan 6 </span>Carmine</h3>
+              <p class="hover-1-trichdan font-weight-dark mb-0">STYLE:CK6457-100|COLORWAY: White/Blue Fury </p>
+              <p class="hover-1-trichdan font-weight-dark mb-0">5.589.000₫</p>
+              </div>
+              </div>
+          </div>
+          
+      </div>
+      <a class="carousel-control-prev" href="#jordan" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#jordan" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <!-- football -->
+    <div class="row border-top border-bottom" >
+      <div class=" col-12-xl">
+        <p class="text-muted">
+       Nam | Football
+        </p>
+      </div>
+   </div>
+
+   <div id="football" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner row w-100 mx-auto" role="listbox">
+        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 active">
+            <div class="hover hover-1 text-white rounded">
+            <img src="../img/football1.jpg "  class="img-fluid mx-auto d-block" alt="img1">
+            <div class="hover-overlay"></div> 
+            <div class="hover-1-noidung px-5 py-4">
+            <h3 class="hover-1-tieude text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Mercurial Vapor </span>Elite FG</h3>
+            <p class="hover-1-trichdan font-weight-dark mb-0">STYLE:CQ7635-600|COLORWAY: Bright Crimson/Indigo </p>
+            <p class="hover-1-trichdan font-weight-dark mb-0">7,319,000₫</p>
+            </div>
+            </div>
+        </div>
+        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="hover hover-1 text-white rounded">
+            <img src="../img/football2.jpg" class="img-fluid mx-auto d-block" alt="img2">
+            <div class="hover-overlay"></div> 
+            <div class="hover-1-noidung px-5 py-4">
+            <h3 class="hover-1-tieude text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Nike Tiempo </span>Legend 8</h3>
+            <p class="hover-1-trichdan font-weight-dark mb-0">STYLE:AT5293-303|COLORWAY: Lime Glow/White</p>
+            <p class="hover-1-trichdan font-weight-dark mb-0">6,739,000₫</p>
+            </div>
+            </div>
+        </div>
+        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="hover hover-1 text-white rounded">
+            <img src="../img/football3.jpg" class="img-fluid mx-auto d-block" alt="img3">
+            <div class="hover-overlay"></div> 
+            <div class="hover-1-noidung px-5 py-4">
+            <h3 class="hover-1-tieude text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Nike Phantom </span>GT Elite</h3>
+            <p class="hover-1-trichdan font-weight-dark mb-0">STYLE:CZ3458-467|COLORWAY: White/Pink Blast </p>
+            <p class="hover-1-trichdan font-weight-dark mb-0">8,219,000₫</p>
+            </div>
+            </div>
+        </div>
+        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="hover hover-1 text-white rounded">
+            <img src="../img/football4.jpg" class="img-fluid mx-auto d-block" alt="img4">
+            <div class="hover-overlay"></div> 
+            <div class="hover-1-noidung px-5 py-4">
+            <h3 class="hover-1-tieude text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Nike Mercurial </span>Vapor 13</h3>
+            <p class="hover-1-trichdan font-weight-dark mb-0">STYLE:CJ1306-110|COLORWAY:  White/Black/White</p>
+            <p class="hover-1-trichdan font-weight-dark mb-0">2,349,000₫</p>
+            </div>
+            </div>
+        </div>
+        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="hover hover-1 text-white rounded">
+            <img src="../img/football5.jpg" class="img-fluid mx-auto d-block" alt="img5">
+            <div class="hover-overlay"></div> 
+            <div class="hover-1-noidung px-5 py-4">
+            <h3 class="hover-1-tieude text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Nike Phantom </span>Dynamic Fit TF</h3>
+            <p class="hover-1-trichdan font-weight-dark mb-0">STYLE:CW6666-400|COLORWAY: Photo Blue/Rage Green</p>
+            <p class="hover-1-trichdan font-weight-dark mb-0">4,699,000₫</p>
+            </div>
+            </div>
+        </div>
+        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="hover hover-1 text-white rounded">
+            <img src="../img/football6.jpg" class="img-fluid mx-auto d-block" alt="img6">
+            <div class="hover-overlay"></div> 
+            <div class="hover-1-noidung px-5 py-4">
+            <h3 class="hover-1-tieude text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Nike Phantom </span>Elite 3D FG</h3>
+            <p class="hover-1-trichdan font-weight-dark mb-0">STYLE:CZ3457-467|COLORWAY: White/Pink Blast </p>
+            <p class="hover-1-trichdan font-weight-dark mb-0">7,909,000₫</p>
+            </div>
+            </div>
+        </div>
+        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="hover hover-1 text-white rounded">
+            <img src="../img/football7.jpg" class="img-fluid mx-auto d-block" alt="img7">
+            <div class="hover-overlay"></div> 
+            <div class="hover-1-noidung px-5 py-4">
+            <h3 class="hover-1-tieude text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Nike Phantom </span>Academy IC</h3>
+            <p class="hover-1-trichdan font-weight-dark mb-0">STYLE:DA2265-001|COLORWAY: Wolf Grey/Black </p>
+            <p class="hover-1-trichdan font-weight-dark mb-0">2,629,000₫</p>
+            </div>
+            </div>
+        </div>
+        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="hover hover-1 text-white rounded">
+            <img src="../img/football8.jpg" class="img-fluid mx-auto d-block" alt="img8">
+            <div class="hover-overlay"></div> 
+            <div class="hover-1-noidung px-5 py-4">
+            <h3 class="hover-1-tieude text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Nike Mercurial </span>Vapor 14</h3>
+            <p class="hover-1-trichdan font-weight-dark mb-0">STYLE:CU5692-600|COLORWAY: Bright Crimson/Indigo Burst </p>
+            <p class="hover-1-trichdan font-weight-dark mb-0">1,609,000₫</p>
+            </div>
+            </div>
+        </div> 
+    </div>
+    <a class="carousel-control-prev" href="#football" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#football" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+  </div>
+  <!-- gym and training -->
+  <div class="row border-top border-bottom" >
+    <div class=" col-12-xl">
+      <p class="text-muted">
+        Nam | Basketball 
+      </p>
+    </div>
+ </div>
+
+ <div id="gym" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner row w-100 mx-auto" role="listbox">
+      <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 active">
+          <div class="hover hover-1 text-white rounded">
+          <img src="../img/basket1.jpg "  class="img-fluid mx-auto d-block" alt="img1">
+          <div class="hover-overlay"></div> 
+          <div class="hover-1-noidung px-5 py-4">
+          <h3 class="hover-1-tieude text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Zion 1 </span>"ZNA"</h3>
+          <p class="hover-1-trichdan font-weight-dark mb-0">STYLE:DA3129-400|COLORWAY: Blue Void/Fierce Purple</p>
+          <p class="hover-1-trichdan font-weight-dark mb-0">3,519,000₫</p>
+          </div>
+          </div>
+      </div>
+      <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="hover hover-1 text-white rounded">
+          <img src="../img/basket2.jpg" class="img-fluid mx-auto d-block" alt="img2">
+          <div class="hover-overlay"></div> 
+          <div class="hover-1-noidung px-5 py-4">
+          <h3 class="hover-1-tieude text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Nike Air Zoom </span>G.T.Cut</h3>
+          <p class="hover-1-trichdan font-weight-dark mb-0">STYLE:CZ0175-101|COLORWAY: White</p>
+          <p class="hover-1-trichdan font-weight-dark mb-0">4,999,000₫</p>
+          </div>
+          </div>
+      </div>
+      <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="hover hover-1 text-white rounded">
+          <img src="../img/basket3.jpg" class="img-fluid mx-auto d-block" alt="img3">
+          <div class="hover-overlay"></div> 
+          <div class="hover-1-noidung px-5 py-4">
+          <h3 class="hover-1-tieude text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">KD </span>14 </h3>
+          <p class="hover-1-trichdan font-weight-dark mb-0">STYLE:CZ0170-400|COLORWAY: eep Royal Blue/Coconut Milk </p>
+          <p class="hover-1-trichdan font-weight-dark mb-0">4,409,000₫</p>
+          </div>
+          </div>
+      </div>
+      <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="hover hover-1 text-white rounded">
+          <img src="../img/basket4.jpg" class="img-fluid mx-auto d-block" alt="img4">
+          <div class="hover-overlay"></div> 
+          <div class="hover-1-noidung px-5 py-4">
+          <h3 class="hover-1-tieude text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">LeBron 18 </span>Low x Mimi</h3>
+          <p class="hover-1-trichdan font-weight-dark mb-0">STYLE:CV7562-102|COLORWAY: White/Team Red</p>
+          <p class="hover-1-trichdan font-weight-dark mb-0">4,699,000₫</p>
+          </div>
+          </div>
+      </div>
+      <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="hover hover-1 text-white rounded">
+          <img src="../img/basket5.jpg" class="img-fluid mx-auto d-block" alt="img5">
+          <div class="hover-overlay"></div> 
+          <div class="hover-1-noidung px-5 py-4">
+          <h3 class="hover-1-tieude text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">PG </span>5 EP</h3>
+          <p class="hover-1-trichdan font-weight-dark mb-0">STYLECW3146-400|COLORWAY: Lapis/Crimson Bliss/Barely Green/Blue Void</p>
+          <p class="hover-1-trichdan font-weight-dark mb-0">3,239,000₫</p>
+          </div>
+          </div>
+      </div>
+      <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="hover hover-1 text-white rounded">
+          <img src="../img/basket6.jpg" class="img-fluid mx-auto d-block" alt="img6">
+          <div class="hover-overlay"></div> 
+          <div class="hover-1-noidung px-5 py-4">
+          <h3 class="hover-1-tieude text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">LeBron 18 </span>'Blue Multi'</h3>
+          <p class="hover-1-trichdan font-weight-dark mb-0">STYLE:CQ9283-900|COLORWAY: Multi-Colour/White </p>
+          <p class="hover-1-trichdan font-weight-dark mb-0">5,869,000₫</p>
+          </div>
+          </div>
+      </div>
+      <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="hover hover-1 text-white rounded">
+          <img src="../img/basket7.jpg" class="img-fluid mx-auto d-block" alt="img7">
+          <div class="hover-overlay"></div> 
+          <div class="hover-1-noidung px-5 py-4">
+          <h3 class="hover-1-tieude text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Kyrie </span>7 EP</h3>
+          <p class="hover-1-trichdan font-weight-dark mb-0">STYLE:CQ9327-500|COLORWAY: Daybreak/Siren Red </p>
+          <p class="hover-1-trichdan font-weight-dark mb-0">6,179,000₫</p>
+          </div>
+          </div>
+      </div>
+      <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="hover hover-1 text-white rounded">
+          <img src="../img/basket8.jpg" class="img-fluid mx-auto d-block" alt="img8">
+          <div class="hover-overlay"></div> 
+          <div class="hover-1-noidung px-5 py-4">
+          <h3 class="hover-1-tieude text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Jordan One Take </span>II PF</h3>
+          <p class="hover-1-trichdan font-weight-dark mb-0">STYLE:CW2458-106|COLORWAY: White/University Red</p>
+          <p class="hover-1-trichdan font-weight-dark mb-0">2,929,000₫</p>
+          </div>
+          </div>
+      </div>
+  </div>
+  <a class="carousel-control-prev" href="#gym" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#gym" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+  </a>
+</div>
+        <!--  dsfsdfsf -->
+        <div class="row border-top" style="background-color: white; padding-top: 20px; padding-bottom: 20px;">
+          <div class="row-12">
+            <h class="text-uppercase font-weight-bold " style="font-size: 20px; margin-left: 600px;">
+              come back and support us
+            </h>
+          </div>
+
+        </div>
+      
+         <!--footer  -->
+
+     
+      <div class="row border-top" id="rowfooter" style="background-color: black;">
+        <div class="col-6">
+          <ul class="nav flex-column" id="footer">
+            <li class="nav-item">
+              <p class="font-weight-normal">Địa Chỉ:</p>
+            </li>
+            <li class="nav-item">
+              <p class="font-weight-normal">Số Điện Thoại:</p>
+            </li>
+            <li class="nav-item">
+              <p class="font-weight-normal">Email:</p>
+            </li>
+            <li class="nav-item">
+              <p class="font-weight-normal">WebSite:</p>
+              </li>
+            
+          </ul>
+        </div>
+        <div class="row-6">
+          <ul class="nav flex-column" id="list-footer">
+            <li class="nav-item" style="margin-left: -2px;">
+              <a href=""class="nav-link" >
+              <img src="../img/fb.png" alt="" style="height: 30px;">
+              <span>FaceBook</span>
+            </a>
+            </li>
+            <li class="nav-item">
+              <a href=""class="nav-link" >
+              <img src="../img/google-chrome-icon-18-256.png" alt="" style="height: 25px;">
+              <span>Google</span>
+            </a>
+            </li>
+            <li class="nav-item">
+              <a href=""class="nav-link" >
+              <img src="../img/icon-youtube.png" alt="" style="height: 24px;">
+              <span>Youtube</span>
+            </a>  
+            </li>
+          </ul>
+        </div>
+
+      </div>   
+      <div class="row border-top border-secondary" style="background-color: black;">
+        <div class="col-12 ">
+           <p class=" text-muted" id="footer-1">© 2021 Nike, Inc. All Rights Reserved</p>
+        </div>
+      </div>
+    
+      <!-- model -->
+      <div class="modal fade" id="myModal">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+          
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title" style="margin-left: 180px; color: rgb(89, 151, 131);" >Đăng Ký</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            
+            <!-- Modal body -->
+            <div class="modal-body">
+             <div class="row">
+              <div class="col-12">
+                <input type="text" onblur="ktTenDN()" class="form-control" id="tenDN" placeholder="Tên Đăng Nhập"style="border-radius: 10px;">
+                <p class="text-danger" id="p1"></p>
+              </div>
+             </div>
+             <div class="row">
+              <div class="col-12">
+                <input type="password" onblur="ktMK()" class="form-control" id="mk" placeholder="Mật Khẩu"style="border-radius: 10px;">
+                <p class="text-danger" id="p2"></p>
+              </div>
+             </div>
+             <div class="row">
+              <div class="col-12">
+                <input type="password" onblur="resKtMK()" class="form-control" id="rmk" placeholder="Nhập Lại Mật Khẩu"style="border-radius: 10px;">
+                <p class="text-danger" id="p3"></p>
+              </div>
+             </div>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Đăng Ký</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
+            </div>           
+          </div>
+        </div>
+      </div>
+      <!-- model DN -->
+      <div class="modal fade" id="myModalDN">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+          
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title" style="margin-left: 180px; color: rgb(52, 70, 64);" >Đăng Nhập</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            
+            <!-- Modal body -->
+            <div class="modal-body">
+             <div class="row">
+              <div class="col-12">
+                <input type="text" onblur="ktTenDN()" class="form-control" id="tenDN" placeholder="Tên Đăng Nhập"style="border-radius: 10px;">
+                <!-- <p id="p1"></p> -->
+              </div>
+             </div>
+             <div class="row">
+              <div class="col-12">
+                <input type="password" onblur="ktMK()" class="form-control" id="mk" placeholder="Mật Khẩu"style="border-radius: 10px;">
+                <!-- <p id="p2"></p> -->
+              </div>
+             </div>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Đăng Nhập</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Thoát</button>
+            </div>           
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+</html>
